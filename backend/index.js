@@ -32,7 +32,7 @@ const generateRandomString = (length) => {
 const sessionSecret = generateRandomString(64);
 
 app.use(
-  session({ secret: sessionSecret, resave: false, saveUninitialized: false }),
+  session({ secret: sessionSecret, resave: false, saveUninitialized: false })
 );
 app.use(passport.initialize());
 app.use(passport.session());
@@ -57,6 +57,7 @@ app.use("/auth", auth.router);
 app.get("/test", ensureAuthenticated, (req, res) => {
   const link = req.user.image;
   res.send(`<img src= ${link} />`);
+  // res.redirect("https://www.google.com");
   // res.json(req.user);
 });
 
@@ -69,6 +70,12 @@ app.get("/logout", (req, res) => {
   // req.session.destroy();
   res.send("Goodbye!");
 });
+
+app.get("/img", ensureAuthenticated, (req, res) => {
+  res.json({ img: req.user.image });
+});
+
+
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

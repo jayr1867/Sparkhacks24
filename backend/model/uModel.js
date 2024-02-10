@@ -64,7 +64,19 @@ const userSchema = new mongoose.Schema({
       },
       description: {
         type: String,
-        required: null,
+        required: false,
+      },
+      pickupAddress: {
+        type: String,
+        required: true,
+      },
+      pickupCity: {
+        type: String,
+        required: true,
+      },
+      pickupContact: {
+        type: String,
+        required: true,
       },
     },
   ],

@@ -1,66 +1,65 @@
-
 .new_donation_btn {
-    position: absolute;
-    top: 100px;
-    right: 50px;
-    font-weight: bold;
-    background-color: #8dc73f;
-    color: black;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .prof_btn {
-    border-radius: 50%;
-    position: absolute;
-    top: 15px;
-    right: 130px;
-    border: none;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  
-  .lgot_btn {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .active_requests_header,
-  .other_requests_header {
-    font-size: 15px;
-    text-align: left;
-    position: relative;
-    left: 30px;
-    margin: 20px 0;
-  }
-  
-  .table_header {
-    text-align: left;
-  }
-  .active_requests_table {
-    width:120%;
-  }
-  
-  .data_active, .data_others {
-    padding-left: 10px;
-    table-layout: fixed;
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 15px 8px;
-    text-align: justify;
-  }
-  
-  .table_data {
-    padding: 10px;
-    word-wrap: break-word;
-  }
-  
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  font-weight: bold;
+  background-color: #8dc73f;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.prof_btn {
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  right: 130px;
+  border: none;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lgot_btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.active_requests_header,
+.other_requests_header {
+  font-size: 15px;
+  text-align: left;
+  position: relative;
+  left: 30px;
+  margin: 20px 0;
+}
+
+.table_header {
+  text-align: left;
+}
+.active_requests_table {
+  width: 120%;
+}
+
+.data_active,
+.data_others {
+  padding-left: 10px;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 15px 8px;
+  text-align: justify;
+}
+
+.table_data {
+  padding: 10px;
+  word-wrap: break-word;
+}

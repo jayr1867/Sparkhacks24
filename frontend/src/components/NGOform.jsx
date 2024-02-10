@@ -38,7 +38,6 @@ function NgoForm({ onSubmit, onBack }) {
     setErrorMessage(""); // Clear any error message
     onSubmit(formValues); // Pass form data back to the parent component
   };
-  
 
   return (
     <form onSubmit={handleSubmit}>

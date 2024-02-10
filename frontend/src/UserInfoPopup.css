@@ -16,44 +16,44 @@
 }
 
 .name {
-    margin-top: 30%;
-    position: relative;
-    display: grid;
-    left: 35%;
-    vertical-align: middle;
+  margin-top: 30%;
+  position: relative;
+  display: grid;
+  left: 35%;
+  vertical-align: middle;
 }
 
 .email {
-    position: relative;
-    display: grid;
-    left: 35%;
-    vertical-align: middle;
+  position: relative;
+  display: grid;
+  left: 35%;
+  vertical-align: middle;
 }
 
 .phone {
-    position: relative;
-    display: grid;
-    left: 35%;
-    vertical-align: middle;
+  position: relative;
+  display: grid;
+  left: 35%;
+  vertical-align: middle;
 }
 
 .nameInp {
-    position: relative;
-    display: grid;
-    left: 35%;
-    vertical-align: middle;
+  position: relative;
+  display: grid;
+  left: 35%;
+  vertical-align: middle;
 }
 
 .emailInp {
-    position: relative;
-    display: grid;
-    left: 35%;
-    vertical-align: middle;
+  position: relative;
+  display: grid;
+  left: 35%;
+  vertical-align: middle;
 }
 
 .phoneInp {
-    position: relative;
-    display: grid;
-    left: 35%;
-    vertical-align: middle;
+  position: relative;
+  display: grid;
+  left: 35%;
+  vertical-align: middle;
 }

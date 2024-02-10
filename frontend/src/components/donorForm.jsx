@@ -19,11 +19,7 @@ function DonorForm({ onSubmit, onBack }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Check for presence of all fields except addressline2
-    if (
-      !formValues.addressline1 ||
-      !formValues.city ||
-      !formValues.contact
-    ) {
+    if (!formValues.addressline1 || !formValues.city || !formValues.contact) {
       setErrorMessage("All fields are required.");
       return;
     }

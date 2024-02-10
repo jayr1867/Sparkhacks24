@@ -1,5 +1,4 @@
-
-.container{
+.container {
   color: black;
 }
 .new_donation_btn {
@@ -50,10 +49,11 @@
   text-align: left;
 }
 .active_requests_table {
-  width:120%;
+  width: 120%;
 }
 
-.data_active, .data_others {
+.data_active,
+.data_others {
   padding-left: 10px;
   table-layout: fixed;
   width: 100%;

@@ -12,19 +12,18 @@ import DashboardDoner from "./DashboardDoner.jsx";
 import DashboardNGO from "./DashboardNGO.jsx";
 import User from "./user.jsx";
 
-
 function App() {
   return (
     <>
       {/* <About />
       <Ribbon/> */}
 
-      <Router>
+      <Router basename="/">
         <Routes>
-          <Route path="/" Component={<Home />} />
-          <Route path="/DashboardDoner" Component={<DashboardDoner />} />
-          <Route path="/DashboardNGO" Component={<DashboardNGO />} />
-          <Route path="/User" Component={<User />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/DashboardDoner" element={<DashboardDoner />} />
+          <Route path="/DashboardNGO" element={<DashboardNGO />} />
+          <Route path="/User" element={<User />} />
         </Routes>
       </Router>
     </>

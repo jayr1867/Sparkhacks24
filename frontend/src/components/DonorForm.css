@@ -1,0 +1,59 @@
+.donor-form {
+  display: grid;
+  font-weight: bold;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25); /* Enhance shadow for depth */
+  max-width: 400px; /* Set a reasonable width */
+  background-color: #008080; /* Softer green background */
+  color: #083e71;
+  align-items: center; /* Center align items */
+  margin: 20px auto; /* Center the form on the page */
+}
+.donor-form input[type="text"]:focus,
+.donor-form input[type="number"]:focus,
+.donor-form textarea:focus {
+  border-color: #64b5f6; /* Highlight focus with color */
+  box-shadow:
+    inset 0 1px 3px rgba(0, 0, 0, 0.1),
+    0 0 8px rgba(100, 181, 246, 0.6);
+  outline: none;
+}
+
+.donor-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.2s,
+    box-shadow 0.3s;
+  width: auto; /* Adapt width to content */
+  align-self: center; /* Center button */
+  background-color: #9a7542; /* Consistent button color */
+  color: #fff; /* White text */
+}
+
+.donor-form button[type="submit"]:hover,
+.donor-form button[type="button"]:hover {
+  transform: translateY(-2px); /* Subtle lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.donor-form button[type="button"] {
+  background-color: #f44336; /* Consistent button color for different types */
+}
+
+/* Additional Styling for Responsiveness and Aesthetics */
+@media (max-width: 768px) {
+  .donor-form {
+    width: 90%; /* Make form width responsive */
+    padding: 20px; /* Adjust padding */
+  }
+}

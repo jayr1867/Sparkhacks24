@@ -21,13 +21,13 @@ function App() {
 
       <Router>
         <Routes>
+          <Home />
           {/* <Route path="/" element={<Home />} /> */}
           <Route path="/DashboardDoner" element={<DashboardDoner />} />
           <Route path="/DashboardNGO" element={<DashboardNGO />} />
           <Route path="/User" element={<User />} />
         </Routes>
       </Router>
-      <Home />
     </>
   );
 }

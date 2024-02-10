@@ -12,9 +12,8 @@ passport.use(
     {
       clientID: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
-      // callbackURL: "http://localhost:5050/auth/google/callback",
-      callbackURL:
-        "https://5qrqb0qk-5050.use.devtunnels.ms/auth/google/callback",
+      callbackURL: "http://localhost:5050/auth/google/callback",
+      // callbackURL: "https://aahar-server.onrender.com/auth/google/callback",
     },
     function (request, accessToken, refreshToken, profile, cb) {
       // User.findOrCreate({ googleId: profile.id }, function (err, user) {
@@ -32,12 +31,12 @@ passport.use(
         },
         function (err, user) {
           return cb(err, user);
-        },
+        }
       );
       // console.log(profile);
       // return cb(null, profile);
-    },
-  ),
+    }
+  )
 );
 
 passport.serializeUser(function (user, done) {

@@ -57,9 +57,9 @@ app.get("/", (req, res) => {
 app.use("/auth", auth.router);
 
 app.get("/test", ensureAuthenticated, (req, res) => {
-  const link = req.user.image;
-  res.send(`<img src= ${link} />`);
-  // res.redirect("https://www.google.com");
+  // const link = req.user.image;
+  // res.send(`<img src= ${link} />`);
+  res.redirect("https://aahar-52pn.onrender.com/User");
   // res.json(req.user);
 });
 

@@ -12,6 +12,7 @@ import DashboardDoner from "./DashboardDoner.jsx";
 import DashboardNGO from "./DashboardNGO.jsx";
 import User from "./user.jsx";
 
+
 function App() {
   return (
     <>
@@ -20,10 +21,10 @@ function App() {
 
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/DashboardDoner" element={<DashboardDoner />} />
-          <Route path="/DashboardNGO" element={<DashboardNGO />} />
-          <Route path="/User" element={<User />} />
+          <Route path="/" Component={<Home />} />
+          <Route path="/DashboardDoner" Component={<DashboardDoner />} />
+          <Route path="/DashboardNGO" Component={<DashboardNGO />} />
+          <Route path="/User" Component={<User />} />
         </Routes>
       </Router>
     </>

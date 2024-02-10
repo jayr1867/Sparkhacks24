@@ -6,6 +6,7 @@ import NGO from "./components/NGO.jsx";
 import Donor from "./components/Donor.jsx";
 import Background from "./Background.jsx";
 import "./components/NGO.css";
+import "./components/DonorForm.css";
 
 function User() {
   const [showForm, setShowForm] = useState(false);

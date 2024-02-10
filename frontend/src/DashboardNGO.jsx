@@ -2,8 +2,8 @@ import { useState } from "react";
 import ReactDOM from "react-dom";
 
 import "./DashboardNGO.css";
-import NGODataPopup from "./NGODataPopup";
-import UserInfoPopup from "./UserInfoPopup";
+import NGODataPopup from "./NGODataPopup.jsx";
+import UserInfoPopup from "./UserInfoPopup.jsx";
 
 function DashhboardNGO() {
   const [detailsPopup, setDetailsPopup] = useState(false);
@@ -26,22 +26,15 @@ function DashhboardNGO() {
           img
         </button>
       </div>
-      <div className="New_requests_header">New requests</div>
-      <div className="new_requests_table">
-        <table className="data_new">
-          <th className="table_header_new">
-            <td className="request_details_new"> Request Details</td>
-            <td className="status">Status</td>
-            <td className="expiry">Expiry</td>
-            <td className="location">Pickup Location</td>
-          </th>
-          <tr className="table_data">
-            <td>adbjhavdsjhsdvkhsfbvgksfbvlfdn</td>
-            <td>Active</td>
-            <td>Expiry</td>
-            <td>Location</td>
-          </tr>
-        </table>
+      <div className="reqbtn">
+        {/* adding + sign img */}
+        <button
+          type="button"
+          className="all_accepted_btn"
+          // onClick={() => }
+        >
+          All Accepted Reqs.
+        </button>
       </div>
       <div className="active_requests_header">Active requests</div>
       <div className="active_requests_table">
@@ -62,10 +55,6 @@ function DashhboardNGO() {
           </tr>
         </table>
       </div>
-      <div className="other_requests_header">Other requests requests</div>
-      <table className="data_others">
-        {/* <tr><td>data to be fetched from table</td></tr> */}
-      </table>
 
       <NGODataPopup trigger={detailsPopup} setTrigger={setDetailsPopup}>
         <h1>ID</h1>

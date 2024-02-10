@@ -9,6 +9,7 @@
   padding: 20px;
 }
 
+
 .close-btn {
   position: absolute;
   top: 5%;
@@ -16,67 +17,79 @@
 }
 .submit-btn {
   position: absolute;
-  left: 45%;
+  left: 40%;
   top: 75%;
+  vertical-align: middle;
 }
 .addresslbl {
+  margin-top: 30%;
   position: relative;
   display: grid;
-  left : 0%;
+  left: 35%;
+  vertical-align: middle;
 }
 .citylbl {
   position: relative;
   display: grid;
-  left : 0%;
+  left: 35%;
+  vertical-align: middle;
 }
 .contactlbl {
   position: relative;
   display: grid;
-  left : 0%;
+  left: 35%;
+  vertical-align: middle;
 }
 .dietry-restlbl {
   position: relative;
   display: grid;
-  left : 0%;
+  left: 17%;
+  vertical-align: middle;
 }
 .explbl {
   position: relative;
   display: grid;
-  left : 0%;
+  left: 17%;
+  vertical-align: middle;
 }
 .qtylbl {
   position: relative;
   display: grid;
-  left : 0%;
+  left: 35%;
+  vertical-align: middle;
 }
 
 .addressinp {
   position: relative;
   top: 40%;
-  left: 10px;
+  left: 35%;
+  vertical-align: middle;
 }
 .cityinp {
   position: relative;
   top: 40%;
-  left: 10px;
+  left: 35%;
+  vertical-align: middle;
 }
 .contactinp {
   position: relative;
   top: 40%;
-  left: 10px;
+  left: 35%;
+  vertical-align: middle;
 }
 .qtyinp {
   position: relative;
   top: 40%;
-  left: 11px;
+  left: 35%;
+  vertical-align: middle;
 }
-.dietry-rest{
+.dietry-rest {
   position: relative;
   top: 40%;
-  left: 8px;
+  left: 17%;
 }
-.exp{
+.exp {
   position: relative;
   top: 40%;
-  left: 8px;
+  left: 17%;
 }

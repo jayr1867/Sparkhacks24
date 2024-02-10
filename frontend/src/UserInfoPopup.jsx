@@ -1,4 +1,5 @@
 import React from "react";
+import "./UserInfoPopup.css";
 
 function UserInfoPopup(props) {
   return props.trigger ? (

@@ -128,7 +128,20 @@ function DashhboardDoner() {
         {/* <tr><td>data to be fetched from table</td></tr> */}
       </table>
       <UserInfoPopup trigger={udetailsPopup} setTrigger={setuDetailsPopup}>
-        <h1>User details form</h1>
+        <div className="container">
+          <div className="userinfo">
+            <div className="userinfoform">
+              <form action="get" className="userinfo">
+                <label className="name">Name:</label>
+                <input type="text" disabled className="nameInp" />
+                <label className="email">Email:</label>
+                <input type="text" disabled className="emailInp" />
+                <label className="phone">Contact number:</label>
+                <input type="text" disabled className="phoneInp" />
+              </form>
+            </div>
+          </div>
+        </div>
       </UserInfoPopup>
       <NewDonationsPopup
         trigger={nddetailsPopup}

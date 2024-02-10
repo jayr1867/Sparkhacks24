@@ -1,0 +1,59 @@
+.UserInfoPopup {
+  position: fixed;
+  top: 8%;
+  left: 20%;
+  width: 60%;
+  height: 80%;
+  border-radius: 50px;
+  background-color: wheat;
+  padding: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5%;
+  left: 85%;
+}
+
+.name {
+    margin-top: 30%;
+    position: relative;
+    display: grid;
+    left: 35%;
+    vertical-align: middle;
+}
+
+.email {
+    position: relative;
+    display: grid;
+    left: 35%;
+    vertical-align: middle;
+}
+
+.phone {
+    position: relative;
+    display: grid;
+    left: 35%;
+    vertical-align: middle;
+}
+
+.nameInp {
+    position: relative;
+    display: grid;
+    left: 35%;
+    vertical-align: middle;
+}
+
+.emailInp {
+    position: relative;
+    display: grid;
+    left: 35%;
+    vertical-align: middle;
+}
+
+.phoneInp {
+    position: relative;
+    display: grid;
+    left: 35%;
+    vertical-align: middle;
+}

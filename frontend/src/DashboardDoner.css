@@ -1,0 +1,49 @@
+.new_donation_btn {
+  top: 80px;
+  right: 80px;
+  position: absolute;
+  font-weight: bold;
+  background-color: greenyellow;
+  color: black;
+}
+
+.prof_btn {
+  border-radius: 70%;
+  position: absolute;
+  top: 15px;
+  right: 130px;
+  border: none;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lgot_btn{
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  border: none;
+  width: fit-content;
+}
+
+.active_requests_header{
+    top: 150px;
+    left: 50px;
+    position: absolute;
+    font-size: 15px;
+}
+
+.data_active{
+    position: absolute;
+    top: 180px;
+    left: 20px;
+}
+
+.data_active{
+    border-collapse: separate;
+    border-spacing: 10px 5px; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

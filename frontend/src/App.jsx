@@ -7,7 +7,7 @@ import "./App.css";
 // import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Home from "./Home.jsx";
+// import Home from "./Home.jsx";
 import DashboardDoner from "./DashboardDoner.jsx";
 import DashboardNGO from "./DashboardNGO.jsx";
 import User from "./user.jsx";
@@ -21,7 +21,7 @@ function App() {
 
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          {/* <Route path="/" element={<Home />} /> */}
           <Route path="/DashboardDoner" element={<DashboardDoner />} />
           <Route path="/DashboardNGO" element={<DashboardNGO />} />
           <Route path="/User" element={<User />} />

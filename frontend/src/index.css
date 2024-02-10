@@ -4,8 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgb(255, 255, 255);
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -31,8 +31,77 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  position: relative;
+  top: 10px;
+  left: 200px;
+  font-size: 2.8em;
   line-height: 1.1;
+  border-bottom: 2px solid rgb(255, 255, 255, 0.5);
+  color: white;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.4em;
+  line-height: 1.1;
+  color: white;
+}
+
+p {
+  text-align: center;
+  font-size: 1.6em;
+  line-height: 1.5;
+  color: white;
+}
+
+span {
+  font-size: 2.4em;
+  color: #000000;
+}
+
+.ribbon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  width: 100%;
+  background-color: #838383;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+body {
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+.ribbon-content {
+  display: flex;
+  align-items: center;
+}
+
+.ribbon-logo {
+  width: 50px; /* Adjust based on your logo size */
+  height: auto;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.ribbon-button {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid white;
+  padding: 10px 15px;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ribbon-button:hover {
+  background-color: #040001;
+  color: #ffffff;
 }
 
 button {
@@ -46,9 +115,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;

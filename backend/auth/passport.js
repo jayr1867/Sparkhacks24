@@ -12,8 +12,8 @@ passport.use(
     {
       clientID: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
-      callbackURL: "http://localhost:5050/auth/google/callback",
-      // callbackURL: "https://aahar-server.onrender.com/auth/google/callback",
+      // callbackURL: "http://localhost:5050/auth/google/callback",
+      callbackURL: "https://aahar-server.onrender.com/auth/google/callback",
     },
     function (request, accessToken, refreshToken, profile, cb) {
       // User.findOrCreate({ googleId: profile.id }, function (err, user) {

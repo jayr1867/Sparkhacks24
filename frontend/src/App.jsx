@@ -18,7 +18,7 @@ function App() {
       {/* <About />
       <Ribbon/> */}
 
-      <Router>
+      <Router basename="/frontend">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/DashboardDoner" element={<DashboardDoner />} />

@@ -6,16 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "prettier . --write && nodemon index.js",
-    "format": "prettier src --check",
-    "format-write": "prettier src --write"
-
+    "format": "prettier . --check",
+    "format-write": "prettier . --write"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
     "express": "^4.18.2",
-    "nodemon": "^3.0.3"
+    "express-session": "^1.18.0",
+    "nodemon": "^3.0.3",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0"
   },
   "devDependencies": {
     "prettier": "^3.2.5"

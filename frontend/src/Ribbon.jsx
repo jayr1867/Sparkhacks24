@@ -1,4 +1,4 @@
-import logo from "./assets/logo.jpg"; // Update the path to your logo image
+import logo from "../public/logo.jpg"; // Update the path to your logo image
 
 const Ribbon = () => {
   return (

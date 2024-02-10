@@ -65,7 +65,7 @@ span {
   left: 0px;
   z-index: 1000;
   width: 100%;
-  background-color: #838383;
+  background-color: #008080;
   color: rgb(0, 0, 0);
   display: flex;
   justify-content: space-between;
@@ -91,7 +91,7 @@ body {
 
 .ribbon-button {
   background-color: #ffffff;
-  color: #000000;
+  color: #008080;
   border: 2px solid white;
   padding: 10px 15px;
   margin-right: 20px;
@@ -100,8 +100,8 @@ body {
 }
 
 .ribbon-button:hover {
-  background-color: #040001;
-  color: #ffffff;
+  background-color: #bbbdf6;
+  color: #000000;
 }
 
 button {

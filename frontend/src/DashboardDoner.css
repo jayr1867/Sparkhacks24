@@ -1,4 +1,7 @@
 
+.container{
+  color: black;
+}
 .new_donation_btn {
   position: absolute;
   top: 100px;

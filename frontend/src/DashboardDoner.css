@@ -20,7 +20,7 @@
   justify-content: center;
 }
 
-.lgot_btn{
+.lgot_btn {
   position: absolute;
   top: 20px;
   right: 30px;
@@ -28,22 +28,24 @@
   width: fit-content;
 }
 
-.active_requests_header{
-    top: 150px;
-    left: 50px;
-    position: absolute;
-    font-size: 15px;
+.active_requests_header {
+  top: 150px;
+  left: 50px;
+  position: absolute;
+  font-size: 15px;
 }
 
-.data_active{
-    position: absolute;
-    top: 180px;
-    left: 20px;
+.table_header {
+  position: absolute;
+  top: 180px;
+  left: 20px;
 }
 
-.data_active{
-    border-collapse: separate;
-    border-spacing: 10px 5px; 
-    padding-top: 20px;
-    padding-bottom: 20px;
+.table_data {
+  border-collapse: separate;
+  border-spacing: 10px 5px;
+  position: relative;
+  padding: 10;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
 }

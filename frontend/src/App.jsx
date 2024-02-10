@@ -1,35 +1,61 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+// import reactLogo from "./assets/react.svg";
+// import viteLogo from "/vite.svg";
+// import "./App.css";
+import "./DashboardDoner.css";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          {/* <button onClick={() => fetch('http://localhost:3000/').then((res) => res.json()).then((data) => console.log(data.message))}> */}
-          count is {count}
+    <div className="container">
+      <div className="logoutbtn">
+        {/* adding + sign img */}
+        <button type="button" className="lgot_btn">
+          Logout
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <div className="profilebtn">
+        {/* adding + sign img */}
+        <button
+          type="button"
+          className="prof_btn"
+          onClick={() => setDetailsPopup(true)}
+        >
+          img
+        </button>
+      </div>
+      <div className="reqbtn">
+        {/* adding + sign img */}
+        <button type="button" className="new_donation_btn">
+          New Donation
+        </button>
+      </div>
+      <div className="active_requests_header">Active requests</div>
+      <div className="active_requests_table">
+        <table className="data_active">
+          <tr className="table_header">
+            <th className="id">ID</th>
+            <th className="request_details"> Request Details</th>
+            <th className="status">Status</th>
+            <th className="expiry">Expiry</th>
+          </tr>
+          <tr className="table_data">
+            <td>id</td>
+            <td>adbjhavdsjhsdvkhsfbvgksfbvlfdn</td>
+            <td>Active</td>
+            <td>Expiry</td>
+          </tr>
+        </table>
+      </div>
+      <div className="other_requests_header">Other requests requests</div>
+      <table className="data_others">
+        {/* <tr><td>data to be fetched from table</td></tr> */}
+      </table>
+      {/* <UserInfoPopup trigger={udetailsPopup}>
+        <h1>User details form</h1>
+      </UserInfoPopup> */}
+    </div>
   );
 }
 

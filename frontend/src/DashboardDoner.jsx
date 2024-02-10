@@ -14,7 +14,11 @@ function DashhboardDoner() {
       </div>
       <div className="profilebtn">
         {/* adding + sign img */}
-        <button type="button" className="prof_btn" onClick={() => setDetailsPopup(true)}>
+        <button
+          type="button"
+          className="prof_btn"
+          onClick={() => setDetailsPopup(true)}
+        >
           img
         </button>
       </div>
@@ -42,10 +46,12 @@ function DashhboardDoner() {
         </table>
       </div>
       <div className="other_requests_header">Other requests requests</div>
-      <table className="data_others">{/* <tr><td>data to be fetched from table</td></tr> */}</table>
-      <UserInfoPopup trigger = {udetailsPopup}>
+      <table className="data_others">
+        {/* <tr><td>data to be fetched from table</td></tr> */}
+      </table>
+      <UserInfoPopup trigger={udetailsPopup}>
         <h1>User details form</h1>
-    </UserInfoPopup>
+      </UserInfoPopup>
     </div>
   );
 }

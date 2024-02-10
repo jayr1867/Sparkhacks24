@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import DashboardDoner from "./DashboardDoner.jsx";
 import DashboardNGO from "./DashboardNGO.jsx";
+import User from "./user.jsx";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/DashboardDoner" element={<DashboardDoner />} />
           <Route path="/DashboardNGO" element={<DashboardNGO />} />
+          <Route path="/User" element={<User />} />
         </Routes>
       </Router>
     </>

@@ -1,6 +1,8 @@
 require("dotenv").config();
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
+const findOrCreate = require("mongoose-findorcreate");
+const User = require("../model/uModel");
 
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
@@ -16,7 +18,22 @@ passport.use(
       // User.findOrCreate({ googleId: profile.id }, function (err, user) {
       //   return cb(err, user);
       // });
-      return cb(null, profile);
+
+      // user.plugin(findOrCreate);
+
+      User.findOrCreate(
+        {
+          googleID: profile.id,
+          email: profile.emails[0].value,
+          displayName: profile.displayName,
+          image: profile.photos[0].value,
+        },
+        function (err, user) {
+          return cb(err, user);
+        },
+      );
+      // console.log(profile);
+      // return cb(null, profile);
     },
   ),
 );

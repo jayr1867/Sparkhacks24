@@ -1,8 +1,6 @@
 const passport = require("./passport");
 const router = require("express").Router();
 
-
-
 router.get(
   "/google",
   passport.authenticate("google", { scope: ["email", "profile"] }),
@@ -20,5 +18,4 @@ router.get("/failure", (req, res) => {
   res.json({ message: "failure" });
 });
 
-
-module.exports =  { router }  ;
+module.exports = { router };

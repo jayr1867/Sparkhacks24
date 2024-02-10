@@ -49,7 +49,7 @@ function DashhboardDoner() {
       <table className="data_others">
         {/* <tr><td>data to be fetched from table</td></tr> */}
       </table>
-      <UserInfoPopup trigger={udetailsPopup}>
+      <UserInfoPopup trigger={udetailsPopup} setTrigger={setuDetailsPopup}>
         <h1>User details form</h1>
       </UserInfoPopup>
     </div>

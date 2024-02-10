@@ -1,9 +1,13 @@
 import { useState } from "react";
 import ReactDOM from "react-dom";
 
-import "./DashboardDoner.css";
+import "./DashboardNGO.css";
+import NGODataPopup from "./NGODataPopup";
+import UserInfoPopup from "./UserInfoPopup";
 
-function DashhboardDoner() {
+function DashhboardNGO() {
+    const [detailsPopup, setDetailsPopup] = useState(false);
+    const [udetailsPopup, setuDetailsPopup] = useState(false);
   return (
     <div className="container">
       <div className="logoutbtn">
@@ -18,23 +22,36 @@ function DashhboardDoner() {
           img
         </button>
       </div>
-      <div className="reqbtn">
-        {/* adding + sign img */}
-        <button type="button" className="new_donation_btn">
-          New Donation
-        </button>
+      <div className="New_requests_header">New requests</div>
+      <div className="new_requests_table">
+        <table className="data_new">
+          <th className="table_header_new">
+            <td className="request_details_new"> Request Details</td>
+            <td className="status">Status</td>
+            <td className="expiry">Expiry</td>
+            <td className="location">Pickup Location</td>
+          </th>
+          <tr className="table_data">
+            <td>adbjhavdsjhsdvkhsfbvgksfbvlfdn</td>
+            <td>Active</td>
+            <td>Expiry</td>
+            <td>Location</td>
+          </tr>
+        </table>
       </div>
       <div className="active_requests_header">Active requests</div>
       <div className="active_requests_table">
         <table className="data_active">
           <th className="table_header">
-            <td className="id">ID</td>
+            <td className="id"></td>
             <td className="request_details"> Request Details</td>
             <td className="status">Status</td>
             <td className="expiry">Expiry</td>
           </th>
           <tr className="table_data">
-            <td>id</td>
+            <td>
+               <a onClick={() => setDetailsPopup(true)}> ID</a>
+            </td>
             <td>adbjhavdsjhsdvkhsfbvgksfbvlfdn</td>
             <td>Active</td>
             <td>Expiry</td>
@@ -43,11 +60,16 @@ function DashhboardDoner() {
       </div>
       <div className="other_requests_header">Other requests requests</div>
       <table className="data_others">{/* <tr><td>data to be fetched from table</td></tr> */}</table>
-      <UserInfoPopup trigger = {udetailsPopup}>
+
+    <NGODataPopup trigger = {detailsPopup}>
+        <h1>ID</h1>
+    </NGODataPopup>
+
+    <UserInfoPopup trigger = {udetailsPopup}>
         <h1>User details form</h1>
     </UserInfoPopup>
     </div>
   );
 }
 
-export default DashhboardDoner;
+export default DashhboardNGO;

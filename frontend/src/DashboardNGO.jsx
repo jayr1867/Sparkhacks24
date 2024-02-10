@@ -6,8 +6,8 @@ import NGODataPopup from "./NGODataPopup";
 import UserInfoPopup from "./UserInfoPopup";
 
 function DashhboardNGO() {
-    const [detailsPopup, setDetailsPopup] = useState(false);
-    const [udetailsPopup, setuDetailsPopup] = useState(false);
+  const [detailsPopup, setDetailsPopup] = useState(false);
+  const [udetailsPopup, setuDetailsPopup] = useState(false);
   return (
     <div className="container">
       <div className="logoutbtn">
@@ -18,7 +18,11 @@ function DashhboardNGO() {
       </div>
       <div className="profilebtn">
         {/* adding + sign img */}
-        <button type="button" className="prof_btn" onClick={() => setDetailsPopup(true)}>
+        <button
+          type="button"
+          className="prof_btn"
+          onClick={() => setuDetailsPopup(true)}
+        >
           img
         </button>
       </div>
@@ -50,7 +54,7 @@ function DashhboardNGO() {
           </th>
           <tr className="table_data">
             <td>
-               <a onClick={() => setDetailsPopup(true)}> ID</a>
+              <a onClick={() => setDetailsPopup(true)}> ID</a>
             </td>
             <td>adbjhavdsjhsdvkhsfbvgksfbvlfdn</td>
             <td>Active</td>
@@ -59,15 +63,17 @@ function DashhboardNGO() {
         </table>
       </div>
       <div className="other_requests_header">Other requests requests</div>
-      <table className="data_others">{/* <tr><td>data to be fetched from table</td></tr> */}</table>
+      <table className="data_others">
+        {/* <tr><td>data to be fetched from table</td></tr> */}
+      </table>
 
-    <NGODataPopup trigger = {detailsPopup}>
+      <NGODataPopup trigger={detailsPopup} setTrigger={setDetailsPopup}>
         <h1>ID</h1>
-    </NGODataPopup>
+      </NGODataPopup>
 
-    <UserInfoPopup trigger = {udetailsPopup}>
+      <UserInfoPopup trigger={udetailsPopup} setTrigger={setuDetailsPopup}>
         <h1>User details form</h1>
-    </UserInfoPopup>
+      </UserInfoPopup>
     </div>
   );
 }

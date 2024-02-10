@@ -8,6 +8,8 @@ const auth = require("./auth/google");
 const mongoose = require("mongoose");
 
 const crypto = require("crypto");
+const UserModel = require("./model/uModel");
+const ObjectId = require("mongoose").Types.ObjectId;
 
 const uri = process.env.MONGO_URI;
 
@@ -32,7 +34,7 @@ const generateRandomString = (length) => {
 const sessionSecret = generateRandomString(64);
 
 app.use(
-  session({ secret: sessionSecret, resave: false, saveUninitialized: false })
+  session({ secret: sessionSecret, resave: false, saveUninitialized: false }),
 );
 app.use(passport.initialize());
 app.use(passport.session());
@@ -75,7 +77,39 @@ app.get("/img", ensureAuthenticated, (req, res) => {
   res.json({ img: req.user.image });
 });
 
+app.get("/mydonations", ensureAuthenticated, (req, res) => {
+  res.json({ donations: req.user.donations });
+});
 
+app.get("/alldonations", ensureAuthenticated, async (req, res) => {
+  const unclaimedDonations = await UserModel.aggregate([
+  { $unwind: '$donations' },
+  { $match: { 'donations.isClaimed': false } }
+]);
+
+// console.log(unclaimedDonations);
+  res.json({ donations: unclaimedDonations.map((user) => user.donations)});
+  // res.json({ message: "All donations" });
+});
+
+app.post("/donate", ensureAuthenticated, async (req, res) => {
+  const { serving, expiration, pickupAddress, pickupCity, pickupContact } =
+    req.body;
+  const donationID = new ObjectId().toString();
+  const expirationDate = new Date(expiration);
+  const newDonation = {
+    donationID,
+    serving,
+    expiration: expirationDate,
+    pickupAddress,
+    pickupCity,
+    pickupContact,
+  };
+  const user = await UserModel.findOne({ googleID: req.user.googleID });
+  user.donations.push(newDonation);
+  await user.save();
+  res.json({ message: "Donation added" });
+});
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

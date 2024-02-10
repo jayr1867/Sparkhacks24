@@ -78,9 +78,12 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
       },
+      isClaimed: {
+        type: Boolean,
+        default: false,
+      },
     },
   ],
-  defualt: [],
 });
 
 userSchema.plugin(require("mongoose-findorcreate"));

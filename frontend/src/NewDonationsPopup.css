@@ -1,17 +1,82 @@
-.NewDonationsPopup{
-    position: fixed;
-    top: 8%;
-    left: 20%;
-    width: 60%;
-    height: 80%;
-    border-radius: 50px;
-    background-color: wheat;
-    padding: 20px;
-
+.NewDonationsPopup {
+  position: fixed;
+  top: 8%;
+  left: 20%;
+  width: 60%;
+  height: 80%;
+  border-radius: 50px;
+  background-color: wheat;
+  padding: 20px;
 }
 
-.close-btn{
-   position: relative;
-   top: 5%;
-   left: 80%;
+.close-btn {
+  position: absolute;
+  top: 5%;
+  left: 85%;
+}
+.submit-btn {
+  position: absolute;
+  left: 45%;
+  top: 75%;
+}
+.addresslbl {
+  position: relative;
+  display: grid;
+  left : 0%;
+}
+.citylbl {
+  position: relative;
+  display: grid;
+  left : 0%;
+}
+.contactlbl {
+  position: relative;
+  display: grid;
+  left : 0%;
+}
+.dietry-restlbl {
+  position: relative;
+  display: grid;
+  left : 0%;
+}
+.explbl {
+  position: relative;
+  display: grid;
+  left : 0%;
+}
+.qtylbl {
+  position: relative;
+  display: grid;
+  left : 0%;
+}
+
+.addressinp {
+  position: relative;
+  top: 40%;
+  left: 10px;
+}
+.cityinp {
+  position: relative;
+  top: 40%;
+  left: 10px;
+}
+.contactinp {
+  position: relative;
+  top: 40%;
+  left: 10px;
+}
+.qtyinp {
+  position: relative;
+  top: 40%;
+  left: 11px;
+}
+.dietry-rest{
+  position: relative;
+  top: 40%;
+  left: 8px;
+}
+.exp{
+  position: relative;
+  top: 40%;
+  left: 8px;
 }

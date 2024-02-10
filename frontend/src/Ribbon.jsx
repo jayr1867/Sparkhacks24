@@ -7,7 +7,7 @@ const Ribbon = () => {
         <img src={logo} alt="Logo" className="ribbon-logo" />
         <span>AAHAR</span>
       </div>
-      <button className="ribbon-button">Sign Up/Sign</button>
+      <button className="ribbon-button">Sign Up/Sign In</button>
     </div>
   );
 };

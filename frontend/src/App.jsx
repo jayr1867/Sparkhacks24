@@ -21,11 +21,10 @@ function App() {
 
       <Router>
         <Routes>
-          <Home />
-          {/* <Route path="/" element={<Home />} /> */}
-          <Route path="/DashboardDoner" element={<DashboardDoner />} />
-          <Route path="/DashboardNGO" element={<DashboardNGO />} />
-          <Route path="/User" element={<User />} />
+          <Route path="/" Component={<Home />} />
+          <Route path="/DashboardDoner" Component={<DashboardDoner />} />
+          <Route path="/DashboardNGO" Component={<DashboardNGO />} />
+          <Route path="/User" Component={<User />} />
         </Routes>
       </Router>
     </>

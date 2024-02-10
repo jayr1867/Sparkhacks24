@@ -83,9 +83,9 @@ app.get("/mydonations", ensureAuthenticated, (req, res) => {
 
 app.get("/alldonations", ensureAuthenticated, async (req, res) => {
   const unclaimedDonations = await UserModel.aggregate([
-  { $unwind: '$donations' },
-  { $match: { 'donations.isClaimed': false } }
-]);
+    { $unwind: '$donations' },
+    { $match: { 'donations.isClaimed': false } }
+  ]);
 
 // console.log(unclaimedDonations);
   res.json({ donations: unclaimedDonations.map((user) => user.donations)});
@@ -109,6 +109,28 @@ app.post("/donate", ensureAuthenticated, async (req, res) => {
   user.donations.push(newDonation);
   await user.save();
   res.json({ message: "Donation added" });
+});
+
+
+app.post("/claim", ensureAuthenticated, async (req, res) => {
+  const { donationID } = req.body;
+  const user = await UserModel.findOne({ googleID: req.user.googleID });
+  const donation = user.donations.find((d) => d.donationID === donationID);
+  donation.isClaimed = true;
+  await user.save();
+  res.json({ message: "Donation claimed" });
+});
+
+
+app.post("/userUpdate", ensureAuthenticated, async (req, res) => {
+  const { address, city, contact, isDonor } = req.body;
+  const user = await UserModel.findOne({ googleID: req.user.googleID });
+  user.address = address;
+  user.city = city;
+  user.contact = contact;
+  user.isDonor = isDonor;
+  await user.save();
+  res.json({ message: "User updated" });
 });
 
 app.listen(port, () => {

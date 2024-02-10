@@ -2,6 +2,8 @@ import { useState } from "react";
 import ReactDOM from "react-dom";
 
 import "./DashboardDoner.css";
+import UserInfoPopup from "./UserInfoPopup.jsx";
+import NewDonationsPopup from "./NewDonationsPopup.jsx";
 
 function DashhboardDoner() {
   const [errorMessage, seterrorMessage] = useState("");
